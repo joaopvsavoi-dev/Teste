@@ -1,0 +1,35 @@
+@import "tailwindcss";
+@import "@fontsource-variable/dm-sans";
+
+@theme {
+  --font-sans: "DM Sans Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html, body, #root {
+  min-height: 100%;
+}
+
+body {
+  @apply bg-slate-950 text-slate-100 antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+input, select, textarea {
+  @apply rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-100 outline-none placeholder:text-slate-500 focus:border-amber-500;
+}
+
+input[type='checkbox'] {
+  @apply h-4 w-4 accent-amber-500 p-0;
+}
+
+input[type='range'] {
+  @apply border-0 bg-transparent p-0 accent-amber-500;
+}
+
+.pb-safe {
+  padding-bottom: calc(env(safe-area-inset-bottom) + 4.5rem);
+}

@@ -1,0 +1,5 @@
+project_id = "norte"
+
+# Trecho relevante da configuração do Supabase CLI (o restante usa os padrões de `supabase init`).
+[functions.gcal-webhook]
+verify_jwt = false
